@@ -14,11 +14,13 @@ import FinalCTA from './components/FinalCTA';
 import ContactFooter from './components/ContactFooter';
 import CustomCursor from './components/CustomCursor';
 import ScrollProgress from './components/ScrollProgress';
+import Loader from './components/Loader';
 import { siteConfig } from './config/siteConfig';
 
 function App() {
   return (
     <div className="min-h-screen bg-[#0B1210] selection:bg-[#C99A3D] selection:text-[#0B1210]">
+      <Loader />
       <CustomCursor />
       <ScrollProgress />
       <Navbar />
