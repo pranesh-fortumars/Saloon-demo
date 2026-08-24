@@ -7,9 +7,9 @@ export const siteConfig = {
   contact: {
     phones: ["80720 83897", "81719 72474"],
     whatsapp: "8072083897", // Default to primary phone
-    address: "Location details coming soon",
-    hours: "CONTENT TO BE UPDATED",
-    email: "CONTENT TO BE UPDATED",
+    address: "123 Signature Avenue, Luxury District, NY 10012",
+    hours: "Mon - Sat: 10:00 AM - 8:00 PM | Sun: Closed",
+    email: "bookings@unisexsalon.com",
   },
   images: {
     hero: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=2000",
@@ -62,7 +62,7 @@ export const siteConfig = {
     { text: "Professional, elegant, and the results are consistently stunning.", author: "Client Experience" }
   ],
   social: {
-    instagram: "CONTENT TO BE UPDATED",
-    facebook: "CONTENT TO BE UPDATED"
+    instagram: "https://instagram.com",
+    facebook: "https://facebook.com"
   }
 };

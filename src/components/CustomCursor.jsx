@@ -47,6 +47,7 @@ const CustomCursor = () => {
 
   return (
     <motion.div
+      aria-hidden="true"
       className="fixed top-0 left-0 w-5 h-5 rounded-full border-2 border-[#C99A3D] pointer-events-none z-[100] hidden md:flex items-center justify-center mix-blend-difference"
       style={{
         x: cursorX,

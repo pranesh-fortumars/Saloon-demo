@@ -6,10 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UNISEX SALON | Hair, Beauty, Makeup & Grooming</title>
     <meta name="description" content="A refined salon experience designed around your style, confidence and individuality. Hair, Beauty, Makeup and Grooming." />
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="UNISEX SALON | Hair, Beauty, Makeup & Grooming" />
+    <meta property="og:description" content="A refined salon experience designed around your style, confidence and individuality." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200" />
+    
+    <!-- Preloads -->
+    <link rel="preload" href="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=2000" as="image" />
+
     <!-- Google Fonts: Cormorant Garamond & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "UNISEX SALON",
+      "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200",
+      "telephone": "8072083897",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Signature Avenue",
+        "addressLocality": "Luxury District",
+        "addressRegion": "NY",
+        "postalCode": "10012",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "20:00"
+      }
+    }
+    </script>
   </head>
   <body class="bg-[#111111] text-[#FAFAFA] font-sans antialiased overflow-x-hidden selection:bg-[#D4AF37] selection:text-[#111111]">
     <div id="root"></div>

@@ -22,6 +22,12 @@ const BookingSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
+    
+    // Fallback email submission since there is no backend configured
+    const subject = `Appointment Request: ${formData.service}`;
+    const body = `Name: ${formData.name}%0A%0APhone: ${formData.phone}%0A%0AService: ${formData.service}%0A%0ADate: ${formData.date}%0A%0ATime: ${formData.time}%0A%0AMessage:%0A${formData.message}`;
+    
+    window.location.href = `mailto:${siteConfig.contact.email}?subject=${subject}&body=${body}`;
   };
 
   const handleWhatsApp = () => {
