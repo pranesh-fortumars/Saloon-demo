@@ -38,21 +38,23 @@ const CustomCursor = () => {
     };
   }, [cursorX, cursorY]);
 
-  // Don't render on touch devices
-  if (typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches) {
-    return null;
+  // Don't render on touch devices or if reduced motion is preferred
+  if (typeof window !== 'undefined') {
+    if (window.matchMedia('(hover: none)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return null;
+    }
   }
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-5 h-5 rounded-full border-2 border-[#D4AF37] pointer-events-none z-[100] hidden md:flex items-center justify-center mix-blend-difference"
+      className="fixed top-0 left-0 w-5 h-5 rounded-full border-2 border-[#C99A3D] pointer-events-none z-[100] hidden md:flex items-center justify-center mix-blend-difference"
       style={{
         x: cursorX,
         y: cursorY,
       }}
       animate={{
         scale: isHovering ? 2.5 : 1,
-        backgroundColor: isHovering ? 'rgba(212, 175, 55, 0.2)' : 'rgba(212, 175, 55, 1)',
+        backgroundColor: isHovering ? 'rgba(201, 154, 61, 0.2)' : 'rgba(201, 154, 61, 1)',
       }}
       transition={{ type: "tween", ease: "backOut", duration: 0.3 }}
     />

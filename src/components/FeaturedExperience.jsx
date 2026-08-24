@@ -4,33 +4,51 @@ import { siteConfig } from '../config/siteConfig';
 
 const FeaturedExperience = () => {
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+  // Parallax effect on the background image
+  const y = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
+  
+  const steps = ["CONSULT", "CREATE", "REFINE", "REVEAL"];
 
   return (
-    <section className="relative h-[80vh] overflow-hidden flex items-center justify-center">
+    <section id="experience" className="relative min-h-screen overflow-hidden flex items-center justify-center py-24">
       <motion.div 
         style={{ y }}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 h-[120%]"
       >
         <img 
-          src={siteConfig.images.featured} 
+          src={siteConfig.images.experience} 
           alt="Discover your signature style" 
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover opacity-60"
+          loading="lazy"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-[#111111]"></div>
+        <div className="absolute inset-0 bg-[#0B1210]/40 mix-blend-multiply"></div>
       </motion.div>
       
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        <div className="flex items-center justify-center gap-4 mb-6">
-          <div className="h-px bg-[#D4AF37]/40 w-12"></div>
-          <span className="text-[#D4AF37] tracking-widest text-sm uppercase">03 / Experience</span>
-          <div className="h-px bg-[#D4AF37]/40 w-12"></div>
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto w-full">
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <span className="text-[#C99A3D] tracking-widest text-sm uppercase">03 / Experience</span>
         </div>
         
-        <h3 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight mb-8">
-          DISCOVER YOUR <br className="hidden md:block"/>
-          <span className="italic font-light text-[#F7E7CE]">SIGNATURE STYLE</span>
-        </h3>
+        <h2 className="font-serif text-section text-white mb-24 leading-tight">
+          YOUR SIGNATURE <span className="italic font-light text-[#E4C477]">STYLE.</span>
+        </h2>
+        
+        <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
+          {steps.map((step, index) => (
+            <motion.div 
+              key={step}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="flex flex-col items-center"
+            >
+              <span className="text-[#C99A3D] font-serif text-4xl mb-4 italic">0{index + 1}</span>
+              <span className="text-[#F5F1E8] tracking-widest text-sm uppercase">{step}</span>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
