@@ -33,17 +33,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="font-serif text-hero mb-6 text-white"
+          className="font-serif text-hero mb-6 text-white tracking-tight"
         >
           YOUR STYLE. <br/>
-          <span className="italic font-light text-[#E4C477]">YOUR SIGNATURE.</span>
+          <span className="text-[#E4C477]">YOUR SIGNATURE.</span>
         </motion.h1>
         
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.7 }}
-          className="text-subheading text-[#F5F1E8] font-light mb-4"
+          className="text-subheading text-[#F5F1E8] font-light mb-4 tracking-wide"
         >
           Hair • Beauty • Makeup • Grooming
         </motion.p>

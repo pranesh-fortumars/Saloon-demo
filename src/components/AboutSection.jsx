@@ -29,12 +29,12 @@ const AboutSection = () => {
             <div className="h-px bg-[#C99A3D]/40 w-16"></div>
           </div>
           
-          <h2 className="font-serif text-section mb-6 text-white">
+          <h2 className="font-serif text-section mb-6 text-white tracking-tight">
             MORE THAN <br/>
-            <span className="italic text-[#E4C477]">A SALON.</span>
+            <span className="text-[#E4C477]">A SALON.</span>
           </h2>
           
-          <p className="text-subheading font-serif italic text-[#A9A49A] mb-8">
+          <p className="text-subheading font-serif text-[#A9A49A] mb-8">
             A place where your everyday look becomes your signature.
           </p>
           
