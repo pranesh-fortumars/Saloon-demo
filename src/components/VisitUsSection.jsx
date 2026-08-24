@@ -14,7 +14,7 @@ const VisitUsSection = () => {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-[#C99A3D] tracking-widest text-sm uppercase mb-6">Phone</h3>
             {siteConfig.contact.phones.map(phone => (
-              <a key={phone} href={`tel:${phone.replace(/\s/g, '')}`} className="font-serif text-2xl text-[#F5F1E8] hover:text-[#C99A3D] transition-colors mb-2 block">
+              <a key={phone} href={`tel:${phone.replace(/\s/g, '')}`} className="font-sans font-light tracking-wide text-2xl text-[#F5F1E8] hover:text-[#C99A3D] transition-colors mb-2 block">
                 {phone}
               </a>
             ))}

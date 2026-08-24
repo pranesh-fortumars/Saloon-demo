@@ -21,7 +21,7 @@ const ContactFooter = () => {
 
         <div className="text-left md:text-right">
           {siteConfig.contact.phones.map(phone => (
-            <p key={phone} className="text-[#F5F1E8] font-serif text-xl mb-1">{phone}</p>
+            <p key={phone} className="text-[#F5F1E8] font-sans font-light tracking-wide text-xl mb-1">{phone}</p>
           ))}
           <a href="#booking" className="text-[#C99A3D] text-xs tracking-widest uppercase hover:text-white transition-colors mt-2 inline-block">
             BOOK AN APPOINTMENT
